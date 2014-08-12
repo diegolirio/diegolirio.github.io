@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="my_page">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +11,8 @@
     <link href="css/theme.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
 	
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" ></script>
-    <script src="language.js" charset="UTF-8"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+    <script src="language.js"></script>	
 	
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700,400|Shadows+Into+Light+Two' rel='stylesheet' type='text/css'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,14 +26,9 @@
     <link rel="stylesheet" href="css/custom_css/animation.css">	
 	
   </head>
-  <body ng-app>
+  <body>
 	<div class="container" ng-controller="InternationalizationController">
 	
-		<div class="pull-right">		
-			<img ng-src="{{spoken.flag}}" height="25"></img>			
-			<select ng-model="spoken" ng-options="lang as lang.name for lang in languages"></select>
-		</div>
-		<br/>
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="well">
@@ -44,14 +39,14 @@
 					<div class="intro">
 						
 							<h1>
-								<!--<b>{{spoken.hello}}</b> -->
-								<!--{{spoken.iAm}}--> Diego Lirio 
+								<b>{{hello}}</b> 
+								Eu sou Diego Lirio 
 								<div class="btn-group">
 								  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-									<i class="icon-download"></i> <small>{{spoken.curriculum}}</small> <span class="caret"></span>
+									<i class="icon-download"></i> <small>Curriculum</small> <span class="caret"></span>
 								  </button>
 								  <ul class="dropdown-menu" role="menu">
-									<li> &nbsp; <small class="text-center"> Download</small></li>
+									<li><small class="text-center"> &nbsp; Download</small></li>
 									<li class="divider"></li>
 									<li><a href="Diego_Lirio_Damacena_Pereira.docx"><img src="images/word_24X24.png"/> Word</a></li>
 									<li><a href="Diego_Lirio_Damacena_Pereira.pdf"><img src="images/pdf_24X24.jpg"/> PDF</a></li>									
@@ -70,34 +65,34 @@
 		<div class="row">
 			<div class="col-sm-12 col-md-6 col-lg-6">
 				<div class="well">					
-					<h3 class="red">{{spoken.titlePersonalData}}</h3>
+					<h3 class="red">#Dados Pessoais</h3>
 					<h4>Diego Lirio Damacena Pereira</h4>
-					<p>{{spoken.maritalStatusNationalOriginAge}}</p>
-					<p>{{spoken.cityState}}</p>
-					<p>{{spoken.phone}} {{spoken.phoneNumber}}</p>
+					<p>Casado, brasileiro, 27 anos</p>
+					<p>São Paulo - SP</p>
+					<p>Tel.: (11) 96140-9798</p>
 				</div>
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6">
 				<div class="well">
-					<h3 class="red">{{spoken.titleObjetive}}</h3>
-					<p>{{spoken.descriptionObjetive}} </p>
-					<p>{{spoken.preferencesObjetive}}</p>
+					<h3 class="red">#Objetivo</h3>
+					<p>Atuar como Analista/Desenvolvedor de sistemas</p>
+					<p>Preferencias: linguagens Java ou Python</p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-12 col-md-12 col-lg-12">
 				<div class="well">					
-					<h3 class="red">{{spoken.titleProfessionalSummary}}</h3>
-					<p>{{spoken.descriptionProfessionalSummary}}</p>
-					<p><span class="badge">Java </span>  {{spoken.descriptionJava}}</p>
-					<p><span class="badge">Front-End Web <!--<i class="fa fa-heart"></i>--></span> {{spoken.frontEndWeb}}</p>
-					<p><span class="badge">C# <!--<i class="fa fa-heart"></i>--></span> {{spoken.cSharp}}</p> 
-					<p><span class="badge">{{spoken.database}} <!--<i class="fa fa-heart"></i>--></span> {{spoken.descriptionDatabase}}</p>
-					<p><span class="badge">Python <!--<i class="fa fa-heart"></i>--></span> {{spoken.python}}</p>
-					<p><span class="badge">Delphi <!--<i class="fa fa-heart"></i>--></span> {{spoken.delphi}}</p>
-					<p><span class="badge">{{spoken.versionControl}} <!--<i class="fa fa-heart"></i>--></span> {{spoken.descriptionVersionControl}}</p>
-					<p><span class="badge">{{spoken.methodologies}} <!--<i class="fa fa-heart"></i>--></span> {{spoken.descriptionMethodologies}}<p/>
+					<h3 class="red">#Resumo Profissional</h3>
+					<p>Cinco anos de experiência na área de desenvolvimento de software.</p>
+					<p><span class="badge">Java </span>  Desenvolvedor Web na linguagem Java, arquitetura MVC com JSP e Servlets, Spring MVC, Struts2, JSF (Primefaces), Spring IoC/DI, JDBC, JPA, Hibernate, Web Service SOAP e Rest, Maven.</p>
+					<p><span class="badge">Front-End Web <!--<i class="fa fa-heart"></i>--></span> Javascript, Ajax, JQuery, JSon, AngularJS, CSS, HTML5, Bootstrap, Google Maps e Google Charts.</p>
+					<p><span class="badge">C# <!--<i class="fa fa-heart"></i>--></span> Quatro anos desenvolvendo Projetos em C#(Windows Forms, Windows Mobile e Web Service SOAP).</p> 
+					<p><span class="badge">Banco de Dados <!--<i class="fa fa-heart"></i>--></span> Desenvolvedor Oracle-PL/SQL (procedures, functions, packages, Cursores e xml), MySql e Postgres.</p>
+					<p><span class="badge">Python <!--<i class="fa fa-heart"></i>--></span> Projetos Web em Python (Framework DJango).</p>
+					<p><span class="badge">Delphi <!--<i class="fa fa-heart"></i>--></span> Quatro anos de Experiência em Delphi 7.</p>
+					<p><span class="badge">Controle de Versão <!--<i class="fa fa-heart"></i>--></span> Git e Subversion</p>
+					<p><span class="badge">Metodologias <!--<i class="fa fa-heart"></i>--></span> Scrum, Kanban e TDD<p/>
 				</div>
 			</div> 
 		</div>			
@@ -105,17 +100,17 @@
 		<div class="row">
 			<div class="col-xs-6">
 				<div class="well">
-					<h3 class="red">{{spoken.titleEducation}}</h3>
+					<h3 class="red">#Formação Acadêmica</h3>
 					<ul class="timeline">
 						<li class="timeline-inverted">
 						  <div class="timeline-badge warning">2011</div>
 						  <div class="timeline-panel">
 							<div class="timeline-heading">
-							  <h4 class="timeline-title">{{spoken.nameUniversity}}</h4>
+							  <h4 class="timeline-title">Universidade Nove de Julho</h4>
 							  <p><small class="text-muted"><i class="fa fa-time"></i> 2011 - 2015</small></p>
 							</div>
 							<div class="timeline-body">
-							  <p>{{spoken.course}}</p>
+							  <p>Graduação em Ciência da Computação.</p>
 							</div>
 						  </div>
 						</li>
@@ -124,18 +119,20 @@
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-6">
 				<div class="well">
-					<h3 class="red">{{spoken.titleExperience}}</h3>
+					<h3 class="red">#Experiência</h3>
 					<div class="panel-group" id="accordion">
 					  
 					  <div class="panel panel-default">
 						<div class="panel-heading">
 						  <h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOneTDV">{{spoken.contemporaryBusiness}}</a>
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOneTDV">
+							  Transportes Della Volpe S/A (04/2010 - Atual)						  
+							</a>
 						  </h4>
 						</div>
 						<div id="collapseOneTDV" class="panel-collapse collapse in">
 						  <div class="panel-body">
-							  <p>{{spoken.descriptionContemporaryBusiness}}</p>
+							  <p>Desde Abril de 2010 atuando como Analista de sistmas em projetos Delphi, C#, Java Web e Oracle-PL/SQL.</p>
 						  </div>
 						</div>
 					  </div>
@@ -143,12 +140,14 @@
 					  <div class="panel panel-default">
 						<div class="panel-heading">
 						  <h4 class="panel-title">
-							<a data-toggle="collapse" data-parent="#accordion" href="#collapseFree">{{spoken.freelancerProjects}}</a>
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseFree">
+							  Projetos Freelancer 					  
+							</a>
 						  </h4>
 						</div>
 						<div id="collapseFree" class="panel-collapse collapse">
 						  <div class="panel-body">
-							  <p><b>{{spoken.project}} <a href="http://managercon.codeforse.com.br" target="_blank">Managercon: </a></b> {{spoken.descriptionFreelancerProjects}}</p>
+							  <p><b>Projeto <a href="http://managercon.codeforse.com.br" target="_blank">Managercon: </a></b> Projeto Web em python Framework Django.</p>
 						  </div>
 						</div>
 					  </div>					  
@@ -161,12 +160,12 @@
 		<div class="row">
 			<div class="col-sm-12 col-md-4 col-lg-4">
 				<div class="well">
-					<h3 class="red">{{spoken.titleContactMe}}</h3>
+					<h3 class="red">#Contato</h3>
 					<div class="row">
 						<div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
 							<div class="contact-item bigger-120">
 							  <div class="icon green pull-left text-center"><i class="icon-phone"></i> </span></div>
-							  <div class="title no-description">{{spoken.phoneNumber}}</div>
+							  <div class="title no-description">(11) 96140-9798</div>
 							</div>
 						</div>
 						<div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
@@ -203,19 +202,26 @@
 			<div class="col-sm-6 col-md-4 col-lg-4">
 				<div class="row">
 					<div class="well">
-						<h3 class="red">{{spoken.titleLanguages}}</h3>
+						<h3 class="red">#Indiomas</h3>
 						<ul class="list-group">
-							<li class="list-group-item"><span class="badge badge-green">{{spoken.fluent}}</span>{{spoken.portuguese}}</li>
-							<li class="list-group-item"><span class="badge badge-green">{{spoken.basic}}</span>{{spoken.english}}</li>
+							<li class="list-group-item">
+								<span class="badge badge-green">Fluente</span>
+								Português
+							</li>
+							<li class="list-group-item">
+								<span class="badge badge-green">Básico</span>
+								Inglês
+							</li>
 						</ul>
 					</div>
 				</div>	
 				<div class="row">
 					<div class="well">
-						<h3 class="red">{{spoken.titleCourses}}</h3>
-						<p><small class="text-muted">{{spoken.descriptionCourseGlobalCode}}</small> - Globalcode.</p>
+						<h3 class="red">#Cursos</h3>
+						<p><small class="text-muted">Sintaxe da Linguagem Java, Programação Orientada a Objetos e UML, Collections, JDBC, 
+						APIs avançadas: Swing, I/O e Threads, Desenvolvimento de aplicativos Web com JSP e Servlet.</small> - Globalcode.</p>
 						
-						<p><small class="text-muted">{{spoken.descriptionCourseCaelum}}</small> - Caelum</p>
+						<p><small class="text-muted">Desenvolvimento Web Java, MVC com JSP e Servlets, Struts2, Spring, JDBC, JPA e Hibernate.</small> - Caelum</p>
 					</div>	
 				</div>					
 			</div>
