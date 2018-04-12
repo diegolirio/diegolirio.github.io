@@ -1,0 +1,57 @@
+<html>
+	<body>
+		<div>
+			<div>
+				<label for="filePicker">Selecione o arquivo:</label><br>
+				<input type="file" id="filePicker">
+			</div>
+			<br>
+			<div>
+				<h1>Base64 encoded version</h1>
+				<textarea id="base64textarea" placeholder="Base64 will appear here" cols="50" rows="15"></textarea>
+			</div>	
+		</div>
+		
+		<script>
+		
+			var self = this;
+		
+			self.__init__ = function() {
+			
+				if (window.File && window.FileReader && window.FileList && window.Blob) {
+					document.getElementById('filePicker').addEventListener('change', handleFileSelect, false);
+				} else {
+					alert('The File APIs are not fully supported in this browser.');
+				}				
+			
+				var f = new File([""], "Diagrama_de_Classe_Teste_Tokio_Jr.png");
+				self.fileSelect(f);
+			}
+		
+			var handleFileSelect = function(evt) {
+				var files = evt.target.files;
+				var file = files[0];
+				self.fileSelect(file);
+			};
+
+			self.fileSelect = function(file) {
+				console.log(file);
+				if (file) {
+					var reader = new FileReader();
+					reader.onload = function(evento) {
+						var binaryString = evento.target.result;
+						console.log(btoa(binaryString));
+						//document.getElementById("base64textarea").value = btoa(binaryString);
+					};
+					reader.readAsBinaryString(file);
+				}			
+			}
+	
+			self.__init__();
+			
+			
+			
+		</script>
+		
+	</body>
+</html>
